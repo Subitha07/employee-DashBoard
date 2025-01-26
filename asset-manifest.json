@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/employee-DashBoard/static/css/main.336faaba.css",
+    "main.js": "/employee-DashBoard/static/js/main.88e6785c.js",
+    "index.html": "/employee-DashBoard/index.html",
+    "main.336faaba.css.map": "/employee-DashBoard/static/css/main.336faaba.css.map",
+    "main.88e6785c.js.map": "/employee-DashBoard/static/js/main.88e6785c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.336faaba.css",
+    "static/js/main.88e6785c.js"
+  ]
+}
