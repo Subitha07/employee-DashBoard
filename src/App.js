@@ -7,6 +7,7 @@ import LeaveSection from "./components/leaveSection";
 import WelcomePage from "./components/login";
 import EmployeeView from "./components/read";
 import UpdateEmployee from "./components/update";
+import { Navigate } from "react-router-dom";
 import './App.css'
 
 
@@ -116,10 +117,13 @@ function App() {
           <Navbar />
 
           <Routes>
+
+          <Route path="/" element={<Navigate to="/employee-DashBoard" />} />
+
             <Route
-              path="/"
+              path="/employee-DashBoard"
               element={<WelcomePage employees={employees} />}
-            ></Route>
+            />
             <Route
               path="/employee-details"
               element={
@@ -147,6 +151,7 @@ function App() {
               path="/update-employee/:id"
               element={<UpdateEmployee handleUpdate={handleUpdate} />}
             />
+            
            
            
           </Routes>
