@@ -21,16 +21,15 @@ function EmployeeDetails({ employees, setEmployees }) {
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center  vh-75">
-      <h1 className="rounded mt-4 ps-5 pe-5">Employee Details</h1>
-
+      <h1 className=" mt-4 text-center">Employee Details</h1>
       <div className=" w-75   p-4">
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-end ">
           <Link to="/create-employee" className="btn btn-info ps-3 pe-3 mb-3">
             Add
           </Link>
         </div>
 
-        <div className="table-container">
+        <div className="table-container mt-4">
           <Table className="table  table-striped table-hover table-bordered table-responsive-sm   table-sm">
             <thead>
               <tr>
@@ -68,13 +67,12 @@ function EmployeeDetails({ employees, setEmployees }) {
                   <td className="text-center">{employee.role}</td>
 
                   <td>
-                    <button
-                      className=" btn btn-md btn-outline-info ms-3"
-                      onClick={() => navigate(`/employee/${employee.id}`)}
-          
+                    <Link
+                      to="/leave-section"
+                      className="btn btn-md btn-outline-info ms-3"
                     >
                       {employee.remainingLeaves}/10{" "}
-                    </button>
+                    </Link>
                   </td>
                   <td className="d-flex justify-content-center flex-column flex-sm-row">
                     <button

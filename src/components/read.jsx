@@ -21,9 +21,15 @@ function EmployeeView({ employees }) {
   }
 
   return (
-    <div className="d-flex w-100 vh-50 justify-content-center align-items-center mt-5">
-      <div className="w-50 border bg-white shadow px-5 pt-4 pb-5  mb-5rounded responsive-sm">
-        <h2 className="text-2xl font-bold mb-4 text-info">
+    <div className="container mt-5">
+    <div className="d-flex w-100 vh-50  row justify-content-center align-items-center mt-5">
+      <div className="w-100 border bg-white shadow px-5 pt-4 pb-5  mb-5rounded responsive-sm">
+        
+          <div className="col-12 col-md-6 col-lg-4">
+           
+
+              
+        <h2 className="text-2xl font-bold mb-4 text-center text-info">
           {employee.name}'s Details
         </h2>
         <h5 className="mb-4">
@@ -43,29 +49,39 @@ function EmployeeView({ employees }) {
           <strong>Available Leaves:</strong> {employee.remainingLeaves}
         </h5>
 
-        <ul>
+        <h5>
           {employee.leaveHistory?.length > 0 ? (
             employee.leaveHistory.map((leave, index) => (
-            <h5 className="text-success" key={index}>
-             Leave Date= {leave.startDate} to {leave.endDate} . Totally {leave.days} days Off
+            <h5 className="text-success " key={index}>
+              <strong>Leave Taken: </strong>
+            
+             {leave.startDate}  to  {leave.endDate}  
               
-            </h5>
+            
+             <p className="mb-0 mt-4 text-danger">
+            <strong>No. of Leave: </strong> <strong >{leave.days}</strong> Leave days
+           </p>
+           </h5>
             
 
           ))):(
-            <h3 className="text-success font-bold">No leave history available</h3>
+            <h3 className="text-success mt-3 text-center font-bold">No leave history available</h3>
           )
         }
-        </ul>
+        </h5>
         <Link
           to="/employee-details"
-          className="btn btn-primary ms-3 mt-3 ps-4 pe-4"
+          className="btn btn-primary ms-3 mt-4 ps-4 pe-4 text-center"
           style={{ textAlign: "center" }}
         >
           Back to Employee Details
         </Link>
       </div>
     </div>
+    </div>
+
+           
+        </div>
   );
 }
 

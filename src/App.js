@@ -7,6 +7,8 @@ import LeaveSection from "./components/leaveSection";
 import WelcomePage from "./components/login";
 import EmployeeView from "./components/read";
 import UpdateEmployee from "./components/update";
+import './App.css'
+
 
 
 
@@ -145,6 +147,7 @@ function App() {
               path="/update-employee/:id"
               element={<UpdateEmployee handleUpdate={handleUpdate} />}
             />
+           
            
           </Routes>
         </div>
